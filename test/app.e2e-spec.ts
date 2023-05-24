@@ -121,9 +121,9 @@ describe('AppController (e2e)', () => {
       ],
     };
     return request(app.getHttpServer())
-      .get('/payment-plan')
+      .post('/payment-plan')
       .send(requestBody)
-      .expect(200)
+      .expect(201)
       .expect(expectedResponseBody);
   });
 });

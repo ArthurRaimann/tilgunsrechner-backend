@@ -1,4 +1,4 @@
-import { Body, Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { CreatePaymentPlanDto } from './dto';
 
@@ -18,7 +18,7 @@ export class AppController {
    * @description This endpoint is used to calculate the payment plan for a loan.
    * The request body will be validated by the validation pipe against the CreatePaymentPlanDto.
    */
-  @Get('/payment-plan')
+  @Post('/payment-plan')
   createPaymentPlan(@Body() body: CreatePaymentPlanDto) {
     return this.appService.createPaymentPlan(body);
   }
