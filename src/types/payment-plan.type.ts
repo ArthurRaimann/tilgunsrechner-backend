@@ -1,11 +1,10 @@
 export interface PaymentPlan {
-  monthlyPaymentAmount: number;
-  restTotalAmount: number;
-  monthlyPaymentPlans: {
-    month: number;
-    monthlyRate: number;
-    interestPortion: number;
-    repaymentPortion: number;
-    remainingDebt: number;
+  monthlyPaymentAmount: string;
+  restTotalAmount: string;
+  yearlyPaymentPlans: {
+    year: number;
+    interestPortion: string;
+    repaymentPortion: string;
+    remainingDebt: string;
   }[];
 }

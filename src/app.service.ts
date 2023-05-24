@@ -18,7 +18,7 @@ export class AppService {
     let paymentPlan: PaymentPlan = {
       monthlyPaymentAmount: null,
       restTotalAmount: null,
-      monthlyPaymentPlans: [],
+      yearlyPaymentPlans: [],
     };
 
     // calculate monthly payment rate
@@ -28,7 +28,9 @@ export class AppService {
       loanAmount,
     );
 
-    paymentPlan.monthlyPaymentAmount = monthlyRate;
+    paymentPlan.monthlyPaymentAmount = Number(
+      monthlyRate.toFixed(2),
+    ).toLocaleString();
 
     // function to calculate the payment plan
     paymentPlan = calculatePaymentPlan(

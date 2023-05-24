@@ -11,10 +11,10 @@ const calculateMonthlyRate = (
 
   // calculate monthly rate --> Monatliche Rate
   const monthlyRate = Number(
-    (loanAmount * (monthlyInterestRate + initialRepaymentRate)).toFixed(2),
+    loanAmount * (monthlyInterestRate + initialRepaymentRate),
   );
 
-  return monthlyRate;
+  return monthlyRate || 0;
 };
 
 export default calculateMonthlyRate;

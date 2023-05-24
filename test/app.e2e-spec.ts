@@ -24,102 +24,25 @@ describe('AppController (e2e)', () => {
 
   it('/payment-plan (GET) - request payment plan', () => {
     const requestBody = {
-      loanAmount: 250000,
-      interestRate: 2,
-      initialRepayment: 3,
+      loanAmount: 1000,
+      interestRate: 1,
+      initialRepayment: 1,
       fixedInterestPeriod: 1,
     };
 
     const expectedResponseBody = {
-      monthlyPaymentAmount: 1041.67,
-      restTotalAmount: 242430.83,
-      monthlyPaymentPlans: [
+      monthlyPaymentAmount: '1,67',
+      restTotalAmount: '989,95',
+      yearlyPaymentPlans: [
         {
-          month: 1,
-          monthlyRate: 1041.67,
-          interestPortion: 416.67,
-          repaymentPortion: 625,
-          remainingDebt: 249375,
-        },
-        {
-          month: 2,
-          monthlyRate: 1041.67,
-          interestPortion: 415.63,
-          repaymentPortion: 626.04,
-          remainingDebt: 248748.96,
-        },
-        {
-          month: 3,
-          monthlyRate: 1041.67,
-          interestPortion: 414.58,
-          repaymentPortion: 627.09,
-          remainingDebt: 248121.87,
-        },
-        {
-          month: 4,
-          monthlyRate: 1041.67,
-          interestPortion: 413.54,
-          repaymentPortion: 628.13,
-          remainingDebt: 247493.74,
-        },
-        {
-          month: 5,
-          monthlyRate: 1041.67,
-          interestPortion: 412.49,
-          repaymentPortion: 629.18,
-          remainingDebt: 246864.56,
-        },
-        {
-          month: 6,
-          monthlyRate: 1041.67,
-          interestPortion: 411.44,
-          repaymentPortion: 630.23,
-          remainingDebt: 246234.33,
-        },
-        {
-          month: 7,
-          monthlyRate: 1041.67,
-          interestPortion: 410.39,
-          repaymentPortion: 631.28,
-          remainingDebt: 245603.05,
-        },
-        {
-          month: 8,
-          monthlyRate: 1041.67,
-          interestPortion: 409.34,
-          repaymentPortion: 632.33,
-          remainingDebt: 244970.72,
-        },
-        {
-          month: 9,
-          monthlyRate: 1041.67,
-          interestPortion: 408.28,
-          repaymentPortion: 633.39,
-          remainingDebt: 244337.33,
-        },
-        {
-          month: 10,
-          monthlyRate: 1041.67,
-          interestPortion: 407.23,
-          repaymentPortion: 634.44,
-          remainingDebt: 243702.89,
-        },
-        {
-          month: 11,
-          monthlyRate: 1041.67,
-          interestPortion: 406.17,
-          repaymentPortion: 635.5,
-          remainingDebt: 243067.39,
-        },
-        {
-          month: 12,
-          monthlyRate: 1041.67,
-          interestPortion: 405.11,
-          repaymentPortion: 636.56,
-          remainingDebt: 242430.83,
+          year: 1,
+          interestPortion: '9,95',
+          repaymentPortion: '10,05',
+          remainingDebt: '989,95',
         },
       ],
     };
+
     return request(app.getHttpServer())
       .post('/payment-plan')
       .send(requestBody)

@@ -2,7 +2,7 @@ import { IsNumber, Max, Min } from 'class-validator';
 
 export class CreatePaymentPlanDto {
   @IsNumber()
-  @Min(1)
+  @Min(0)
   loanAmount: number; // amount of the requested loan --> Darlehensbetrag
   @IsNumber()
   @Min(0)
