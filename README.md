@@ -2,8 +2,9 @@
 
 ## Description
 
-This is the backend part of the **_Tilgunsrechner_**
+This is the backend part of the **_Tilgunsrechner_**.
 This backend api will calculate a payment plan if being provided with the correct request body.
+Find [Frontend part here](https://github.com/ArthurRaimann/tilgungsrechner-fe).
 
 ```
 Route(relative) --> /payment-plan
