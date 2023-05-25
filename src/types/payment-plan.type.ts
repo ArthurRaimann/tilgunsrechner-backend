@@ -3,6 +3,7 @@ export interface PaymentPlan {
   restTotalAmount: string;
   yearlyPaymentPlans: {
     year: number;
+    yearlyRate: string;
     interestPortion: string;
     repaymentPortion: string;
     remainingDebt: string;

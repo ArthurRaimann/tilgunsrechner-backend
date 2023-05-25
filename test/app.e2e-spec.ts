@@ -36,6 +36,7 @@ describe('AppController (e2e)', () => {
       yearlyPaymentPlans: [
         {
           year: 1,
+          yearlyRate: '20',
           interestPortion: '9,95',
           repaymentPortion: '10,05',
           remainingDebt: '989,95',

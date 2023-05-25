@@ -43,6 +43,9 @@ const calculatePaymentPlan = (
     // create yearly entry for payment plan
     paymentPlan.yearlyPaymentPlans.push({
       year: i,
+      yearlyRate: Number(
+        (annualInterestComponent + annualRepaymentComponent).toFixed(2) || 0,
+      ).toLocaleString(),
       interestPortion: Number(
         annualInterestComponent.toFixed(2) || 0,
       ).toLocaleString(),
