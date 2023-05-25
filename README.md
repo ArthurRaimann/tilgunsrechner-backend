@@ -2,8 +2,9 @@
 
 ## Description
 
-This is the backend part of the **_Tilgunsrechner_**
-This backend api will calculate a payment plan if being provided with the correct request body:
+This is the backend part of the **_Tilgunsrechner_**.
+This backend api will calculate a payment plan if being provided with the correct request body.
+Find [Frontend part here](https://github.com/ArthurRaimann/tilgungsrechner-fe).
 
 ```
 Route(relative) --> /payment-plan
@@ -13,8 +14,8 @@ Route(relative) --> /payment-plan
 HTTP method: POST
 ```
 
+Request body example:
 ```
-Request body:
 {
   "loanAmount": 250000,
   "interestRate": 2,
@@ -38,7 +39,8 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
-
+Locally the PORT will be 3003 --> [localhost:3003
+](http://localhost:3003)
 ## Test
 
 One e2e Test was created to test the business logic of the provided route.
