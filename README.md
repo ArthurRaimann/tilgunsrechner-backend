@@ -38,8 +38,8 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
-Locally the PORT will be 3003 --> localhost://3003
-
+Locally the PORT will be 3003 --> [localhost:3003
+](http://localhost:3003)
 ## Test
 
 One e2e Test was created to test the business logic of the provided route.
