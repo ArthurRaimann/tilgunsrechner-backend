@@ -6,6 +6,10 @@ This is the backend part of the **_Tilgunsrechner_**.
 This backend api will calculate a payment plan if being provided with the correct request body.
 Find [Frontend part here](https://github.com/ArthurRaimann/tilgungsrechner-fe).
 
+#### ***Demo***
+Frontend: https://tilgungsrechner-fe.vercel.app/<br/>
+API: https://tilgungsrechner-api.herokuapp.com/payment-plan
+#
 ```
 Route(relative) --> /payment-plan
 ```
