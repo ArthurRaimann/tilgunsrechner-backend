@@ -3,7 +3,7 @@
 ## Description
 
 This is the backend part of the **_Tilgunsrechner_**
-This backend api will calculate a payment plan if being provided with the correct request body:
+This backend api will calculate a payment plan if being provided with the correct request body.
 
 ```
 Route(relative) --> /payment-plan
@@ -13,8 +13,8 @@ Route(relative) --> /payment-plan
 HTTP method: POST
 ```
 
+Request body example:
 ```
-Request body:
 {
   "loanAmount": 250000,
   "interestRate": 2,
