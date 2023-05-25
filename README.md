@@ -38,6 +38,7 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+Locally the PORT will be 3003 --> localhost://3003
 
 ## Test
 
